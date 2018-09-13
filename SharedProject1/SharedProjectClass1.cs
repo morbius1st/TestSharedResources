@@ -1,28 +1,30 @@
 ﻿using System;
 
+using static SharedProject1.SharedConstants;
+
+
 namespace SharedProject1
 {
 	public class SharedProjectClass1
 	{
 		public string WhoAmI()
 		{
-			return "I am SharedProject1";
+			return "I am " + SHPROJECTNAME;
 		}
 
 		public static string TellMeWhoIAm(string who)
 		{
-			return "@ shared project| I am " + who;
-
+			return "@ " + SHPROJECTNAME + "| I am " + who;
 		}
 
 		public static string UseSharedString()
 		{
-			return "@ shared project| " + SharedResources.Resources.SharedStrings.WhoIAm;
+			return "@ " + SHPROJECTNAME + "| " + SharedResources.Resources.SharedStrings.WhoIAm;
 		}
 
 		public static string UseLocalString()
 		{
-			return "@ shared project| I am a local string| " +
+			return "@ " + SHPROJECTNAME + "| I am a local string| " +
 				SharedProject1.StringProvider.LocalStringProvider();
 		}
 

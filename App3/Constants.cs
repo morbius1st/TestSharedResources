@@ -10,16 +10,16 @@ using System.Threading.Tasks;
 #endregion
 
 
-// projname: App2
+// projname: App3
 // itemname: Constants
 // username: jeffs
-// created:  9/11/2018 10:38:06 PM
+// created:  9/12/2018 6:03:10 PM
 
 
-namespace App2
+namespace App3
 {
 	public class Constants
 	{
-		public static string PROJECTNAME = "App2";
+		public static string PROJECTNAME = "App3";
 	}
 }

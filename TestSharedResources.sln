@@ -11,10 +11,13 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedProject1", "SharedPro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedResources", "SharedResources\SharedResources.csproj", "{7E61E2A7-A999-485D-A3E3-4F9C51810025}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App3", "App3\App3.csproj", "{6B55DC27-52CD-48E1-811E-A3D2E9E96A62}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		SharedProject1\SharedProject1.projitems*{01cc0e34-6b9d-4b36-93ec-8f8218a6bd1c}*SharedItemsImports = 13
 		SharedProject1\SharedProject1.projitems*{1511b578-e0e2-40a5-b259-330a7d5ade56}*SharedItemsImports = 4
+		SharedProject1\SharedProject1.projitems*{6b55dc27-52cd-48e1-811e-a3d2e9e96a62}*SharedItemsImports = 4
 		SharedProject1\SharedProject1.projitems*{7e61e2a7-a999-485d-a3e3-4f9c51810025}*SharedItemsImports = 4
 		SharedProject1\SharedProject1.projitems*{ed9ac0e8-2fc0-4387-9cd5-49d273a8d9fc}*SharedItemsImports = 4
 	EndGlobalSection
@@ -24,7 +27,6 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{ED9AC0E8-2FC0-4387-9CD5-49D273A8D9FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ED9AC0E8-2FC0-4387-9CD5-49D273A8D9FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED9AC0E8-2FC0-4387-9CD5-49D273A8D9FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED9AC0E8-2FC0-4387-9CD5-49D273A8D9FC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1511B578-E0E2-40A5-B259-330A7D5ADE56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{7E61E2A7-A999-485D-A3E3-4F9C51810025}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E61E2A7-A999-485D-A3E3-4F9C51810025}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E61E2A7-A999-485D-A3E3-4F9C51810025}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B55DC27-52CD-48E1-811E-A3D2E9E96A62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B55DC27-52CD-48E1-811E-A3D2E9E96A62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B55DC27-52CD-48E1-811E-A3D2E9E96A62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B55DC27-52CD-48E1-811E-A3D2E9E96A62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

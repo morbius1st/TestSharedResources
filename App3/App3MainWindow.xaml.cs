@@ -1,41 +1,33 @@
 ﻿using System.Windows;
 
-using App2.Resources;
-using static App2.Constants;
-
-//using SharedResources.Resources;
+using App3.Resources;
+using static App3.Constants;
 
 using static SharedProject1.SharedConstants;
 
-// branch App2-SharedStringsViaLogicalName
-
-// an alternate approach is to reference the shared
-// resource project and link the resource files
-// by it self it fails
-// however, if the embed tag in the csproj
-// file is adjusted to provide the
-// logicalname tag and the correct
-// logical name is provided, then it all works
-
-// in this version, the shared resource designer
-// file has its default namespace
+// step 1
+// initial setup of app 3 that uses shared resources
+// but the csproj file has not been modified
+// step 2
+//  the csproj file has been modified to add
+// the logicalname tag that "corrects" the
+// name of the resource within the assembly
 
 
-namespace App2
+
+namespace App3
 {
 	/// <summary>
-	/// Interaction logic for App2MainWindow.xaml
+	/// Interaction logic for MainWindow.xaml
 	/// </summary>
-	public partial class App2MainWindow : Window
+	public partial class MainWindow : Window
 	{
-		
-
-		public App2MainWindow()
+		public MainWindow()
 		{
 			InitializeComponent();
 
 			// list who I am
-			textBox1.Text = TellMeWhoIAm(WhoAmI() + NL);
+			textBox1.Text = TellMeWhoIAm(WhoAmI()) + NL;
 
 			// use a shared routine from shared project
 			// to say who I am
@@ -57,7 +49,7 @@ namespace App2
 
 			// use a string from local resources
 			textBox1.AppendText("local resource string :: >" +
-				App2.Resources.LocalString.LocalStringApp2 + "<" + NL);
+				App3.Resources.LocalString.LocalStringApp3 + "<" + NL);
 		}
 
 
@@ -74,8 +66,8 @@ namespace App2
 				+ "| I am " + who;
 
 		}
-
 	}
+	
 }
 
 // this is how a local string or other value can be provided
@@ -85,7 +77,6 @@ namespace SharedProject1
 {
 	public class StringProvider
 	{
-
 		public static string LocalStringProvider()
 		{
 			return LocalString.WhoIAm;
