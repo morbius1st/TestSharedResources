@@ -1,6 +1,4 @@
 ﻿using System;
-using SharedResources.Resources;
-
 
 namespace SharedResources
 {
@@ -21,7 +19,7 @@ namespace SharedResources
 		// returns who I am
 		public static string WhoAmI()
 		{
-			return SharedStrings.WhoIAm;
+			return SharedProject1.Resources.SharedStrings.WhoIAm;
 		}
 	}
 }

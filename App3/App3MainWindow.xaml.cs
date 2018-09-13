@@ -40,7 +40,7 @@ namespace App3
 
 			// use a string from shared resources
 			textBox1.AppendText("shared resource string :: >" +
-				SharedResources.Resources.SharedStrings.WhoIAm + "<" + NL);
+				SharedProject1.Resources.SharedStrings.WhoIAm + "<" + NL);
 
 			// use a string from shared resources that is provided
 			// by a routine in the shared project

@@ -19,7 +19,7 @@ namespace SharedProject1
 
 		public static string UseSharedString()
 		{
-			return "@ " + SHPROJECTNAME + "| " + SharedResources.Resources.SharedStrings.WhoIAm;
+			return "@ " + SHPROJECTNAME + "| I am a shared string| " + Resources.SharedStrings.WhoIAm;
 		}
 
 		public static string UseLocalString()

@@ -30,17 +30,15 @@ namespace App1
 			// use a shared routine from shared project
 			// to say who I am
 			textBox1.AppendText(
-				SharedProject1.SharedProjectClass1
-					.TellMeWhoIAm(PROJECTNAME) + NL);
+				SharedProject1.SharedProjectClass1.TellMeWhoIAm(PROJECTNAME) + NL);
 			
 			// use a local string run through a shared project
 			textBox1.AppendText(
-				SharedProject1.SharedProjectClass1
-					.UseLocalString() + NL);
+				SharedProject1.SharedProjectClass1.UseLocalString() + NL);
 
 			// use a string from shared resources
 			textBox1.AppendText("shared resource string :: >" +
-				SharedResources.Resources.SharedStrings.WhoIAm + "<" + NL);
+				SharedProject1.Resources.SharedStrings.WhoIAm + "<" + NL);
 
 			// use a string from shared resources that is provided
 			// by a routine in the shared project

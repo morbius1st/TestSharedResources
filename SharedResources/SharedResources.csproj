@@ -58,6 +58,7 @@
     <EmbeddedResource Include="Resources\SharedStrings.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>SharedStrings.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>SharedProject1.Resources</CustomToolNamespace>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="..\SharedProject1\SharedProject1.projitems" Label="Shared" />

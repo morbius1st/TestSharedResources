@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SharedResources.Resources {
+namespace SharedProject1.Resources {
     using System;
     
     

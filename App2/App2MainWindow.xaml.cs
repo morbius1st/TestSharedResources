@@ -7,18 +7,23 @@ using static App2.Constants;
 
 using static SharedProject1.SharedConstants;
 
-// branch App2-SharedStringsViaLogicalName
+// branch App2-ADjSharedResourceNamespace
 
-// an alternate approach is to reference the shared
-// resource project and link the resource files
-// by it self it fails
-// however, if the embed tag in the csproj
-// file is adjusted to provide the
-// logicalname tag and the correct
-// logical name is provided, then it all works
+// in this version, the shared resource file's
+// namespace has been revised to align wiht
+// the shared project namespace that is:
+// SharedProject1.Resources
 
-// in this version, the shared resource designer
-// file has its default namespace
+// step 1
+// this created 9 errors due to not being able to
+// find the resources
+// step 2
+// adjust the references.  the fix is easy,
+// change the primary namespace name
+// to the alternate name.  that is, 
+// SharedResources becomes SharedProject1, and
+// in the shared project file, the primary
+// namespace name gets removed
 
 
 namespace App2
@@ -48,7 +53,7 @@ namespace App2
 
 			// use a string from shared resources
 			textBox1.AppendText("shared resource string :: >" +
-				SharedResources.Resources.SharedStrings.WhoIAm + "<" + NL);
+				SharedProject1.Resources.SharedStrings.WhoIAm + "<" + NL);
 
 			// use a string from shared resources that is provided
 			// by a routine in the shared project
