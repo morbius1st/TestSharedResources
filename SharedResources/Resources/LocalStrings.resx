@@ -117,10 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="SharedDialogBoxText" xml:space="preserve">
-    <value>I am a shared dialog box 1</value>
-  </data>
-  <data name="WhoIAm" xml:space="preserve">
-    <value>I am shared strings</value>
+  <data name="WhoAmI" xml:space="preserve">
+    <value>I am Shared Resources</value>
   </data>
 </root>

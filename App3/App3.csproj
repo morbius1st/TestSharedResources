@@ -59,11 +59,23 @@
     <Compile Include="..\SharedResources\Resources\SharedStrings.Designer.cs">
       <Link>Resources\SharedStrings.Designer.cs</Link>
     </Compile>
+    <Compile Include="..\SharedResources\SharedDialogBox.xaml.cs">
+      <Link>Shared\SharedDialogBox.xaml.cs</Link>
+      <DependentUpon>SharedDialogBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="..\SharedResources\SharedResourceClass2.cs">
+      <Link>Shared\SharedResourceClass2.cs</Link>
+    </Compile>
     <Compile Include="Resources\LocalString.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LocalString.resx</DependentUpon>
     </Compile>
+    <Page Include="..\SharedResources\SharedDialogBox.xaml">
+      <Link>Shared\SharedDialogBox.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="App3MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -88,7 +100,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="..\SharedResources\Resources\SharedStrings.resx">
-    <LogicalName>SharedResources.Resources.SharedStrings.resources</LogicalName>
+      <LogicalName>SharedResources.Resources.SharedStrings.resources</LogicalName>
       <Link>Resources\SharedStrings.resx</Link>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -107,7 +119,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="..\SharedProject1\SharedProject1.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

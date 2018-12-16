@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 
 using App2.Resources;
+using SharedProject1;
 using static App2.Constants;
 
 //using SharedResources.Resources;
@@ -10,7 +11,7 @@ using static SharedProject1.SharedConstants;
 // branch App2-ADjSharedResourceNamespace
 
 // in this version, the shared resource file's
-// namespace has been revised to align wiht
+// namespace has been revised to align with
 // the shared project namespace that is:
 // SharedProject1.Resources
 
@@ -33,10 +34,12 @@ namespace App2
 	/// </summary>
 	public partial class App2MainWindow : Window
 	{
-		
+		private SharedProjectClass2 cl2;
 
 		public App2MainWindow()
 		{
+			cl2 = new SharedProjectClass2();
+
 			InitializeComponent();
 
 			// list who I am
@@ -53,7 +56,7 @@ namespace App2
 
 			// use a string from shared resources
 			textBox1.AppendText("shared resource string :: >" +
-				SharedProject1.Resources.SharedStrings.WhoIAm + "<" + NL);
+				SharedResources.Resources.SharedStrings.WhoIAm + "<" + NL);
 
 			// use a string from shared resources that is provided
 			// by a routine in the shared project
@@ -63,6 +66,12 @@ namespace App2
 			// use a string from local resources
 			textBox1.AppendText("local resource string :: >" +
 				App2.Resources.LocalString.LocalStringApp2 + "<" + NL);
+
+			// use a string shared resource via non-static class in shared project
+			textBox1.AppendText(NL + NL + 
+				"non-static shared class using a " + NL
+				+ "shared resource string :: >" +
+				cl2.UseSharedString2() + "<" + NL);
 		}
 
 

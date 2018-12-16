@@ -1,13 +1,18 @@
 ﻿using System.Windows;
 
 using App3.Resources;
+using SharedProject1;
+using SharedResources;
 using static App3.Constants;
 
 using static SharedProject1.SharedConstants;
 
+
+
 // step 1
 // initial setup of app 3 that uses shared resources
 // but the csproj file has not been modified
+// - this does not work
 // step 2
 //  the csproj file has been modified to add
 // the logicalname tag that "corrects" the
@@ -40,7 +45,7 @@ namespace App3
 
 			// use a string from shared resources
 			textBox1.AppendText("shared resource string :: >" +
-				SharedProject1.Resources.SharedStrings.WhoIAm + "<" + NL);
+				SharedResources.Resources.SharedStrings.WhoIAm + "<" + NL);
 
 			// use a string from shared resources that is provided
 			// by a routine in the shared project
@@ -49,9 +54,24 @@ namespace App3
 
 			// use a string from local resources
 			textBox1.AppendText("local resource string :: >" +
-				App3.Resources.LocalString.LocalStringApp3 + "<" + NL);
-		}
+				App3.Resources.LocalString.LocalStringApp3   + "<" + NL);
+			
+			// step 1: with out a reference to SharedResources, 
+			// this does not work
+			// step 2: adding SharedResources as a refernce
+			// allows this to work
+			// ** except this causes sharedresources to be built
+			// and the below then uses this application to 
+			// get the below
+			textBox1.AppendText("from sharedresources| " +
+				SharedResourceClass2.WhoAmI() + NL);
 
+			SharedResources.SharedDialogBox dialog = new SharedDialogBox();
+
+			textBox1.AppendText("from sharedresources dialog box| " +
+				(dialog.ShowDialog() ?? false) + NL);
+
+		}
 
 		// returns a local string
 		public static string WhoAmI()

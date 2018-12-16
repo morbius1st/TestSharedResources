@@ -16,7 +16,7 @@ using System.Threading.Tasks;
 // created:  9/11/2018 10:29:55 PM
 
 
-namespace SharedResources
+namespace SharedProject1
 {
 	public class Constants
 	{

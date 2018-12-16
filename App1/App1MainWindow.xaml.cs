@@ -1,23 +1,26 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using App1.Resources;
+
 using static SharedProject1.SharedConstants;
 
 
-// this example uses a reference to the sharedresources 
-// project - but this creates a dependancy on the
-// shared resources project and causes a build 
-// of the shared resources project and a 
-// requirement that the shared resources build
-// be included
+// this example uses the sharedresources project - this is not a shared project
+// and the sharedproject1 project - this is a shared project
+// this uses the resx defined in the shared resources
+// this uses the xaml dialog box in shared resources
+// this uses code defined in the shared project
 
 
 namespace App1
 {
+	
 	/// <summary>
 	/// Interaction logic for App1MainWindow.xaml
 	/// </summary>
 	public partial class App1MainWindow : Window
 	{
+
 		private const string PROJECTNAME = "App1";
 
 		public App1MainWindow()
@@ -38,7 +41,7 @@ namespace App1
 
 			// use a string from shared resources
 			textBox1.AppendText("shared resource string :: >" +
-				SharedProject1.Resources.SharedStrings.WhoIAm + "<" + NL);
+				SharedResources.Resources.SharedStrings.WhoIAm + "<" + NL);
 
 			// use a string from shared resources that is provided
 			// by a routine in the shared project
@@ -65,6 +68,15 @@ namespace App1
 
 		}
 
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			this.Close();
+		}
+
+		private void Dialog_OnClick(object sender, RoutedEventArgs e)
+		{
+			(new SharedResources.SharedDialogBox()).ShowDialog();
+		}
 	}
 }
 
